@@ -11,27 +11,6 @@ import utilities.testBase;
 
 public class emiVerificationObjects extends testBase{
 	
-	/*
-	 * @FindBy(xpath = "//*[contains(text(),'Allow')]") WebElement allow;
-	 */
-	/*
-	 * @FindBy(xpath = "//*[@class='personal-mobile-1 shorter']") WebElement
-	 * products;
-	 */
-	
-	/*
-	 * @FindBy(xpath = "//*[text()='Loans']") 
-	 * WebElement Loans;
-	 */
-	
-	/*
-	 * @FindBy(xpath = "//*[@class='lhsnavigation']/li[5]") WebElement
-	 * PersonalLoans;
-	 */
-	/*
-	 * @FindBy(xpath = "//*[@class='lhsnavigation']/li[4]") WebElement
-	 * EmiCalculator;
-	 */
 	public emiVerificationObjects() {
 		PageFactory.initElements(driver, this);
 	}
