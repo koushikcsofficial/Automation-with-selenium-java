@@ -1,205 +1,389 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:/AutomationLearn/projectBDDframework/src/main/java/Features/amazonflow.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:/AutomationLearn/projectBDDframework/src/main/java/Features/emiVerification.feature");
 formatter.feature({
   "line": 1,
-  "name": "Amazon First flow Test",
+  "name": "ICICI",
   "description": "",
-  "id": "amazon-first-flow-test",
+  "id": "icici",
   "keyword": "Feature"
 });
 formatter.scenario({
   "line": 3,
-  "name": "Verify Pay on Delivery",
+  "name": "Naviage upto personal loan emi",
   "description": "",
-  "id": "amazon-first-flow-test;verify-pay-on-delivery",
+  "id": "icici;naviage-upto-personal-loan-emi",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 4,
-  "name": "User is on Amazon Home page",
+  "name": "User already at bank index page",
   "keyword": "Given "
 });
 formatter.step({
   "line": 5,
-  "name": "User Clicks on Customer Service",
+  "name": "title is Personal Banking",
   "keyword": "When "
 });
 formatter.step({
   "line": 6,
-  "name": "User Hover on payment pricing",
+  "name": "Allow popup",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 7,
+  "name": "Mouse hover on Product tan and click Loans",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "Click on Personal Loan",
   "keyword": "And "
 });
+formatter.step({
+  "line": 9,
+  "name": "Click on EMI Calculator",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 10,
+  "name": "Verify that Personal Loan Emi Calculator is Opened",
+  "keyword": "Then "
+});
 formatter.match({
-  "location": "amazonflow.user_is_on_Amazon_Home_page()"
+  "location": "emiVerificationstepDefinition.open_bank_index()"
 });
 formatter.result({
-  "duration": 20437614700,
+  "duration": 24506932500,
   "status": "passed"
 });
 formatter.match({
-  "location": "amazonflow.user_Clicks_on_Customer_Service()"
+  "location": "emiVerificationstepDefinition.title_check()"
 });
 formatter.result({
-  "duration": 4668624600,
+  "duration": 16014500,
   "status": "passed"
 });
 formatter.match({
-  "location": "amazonflow.user_Hover_on_payment_pricing()"
+  "location": "emiVerificationstepDefinition.allow_popup()"
 });
 formatter.result({
-  "duration": 168269000,
+  "duration": 6281051600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "emiVerificationstepDefinition.mouse_hover_on_Product_tan_and_click_Loans()"
+});
+formatter.result({
+  "duration": 9442848000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "emiVerificationstepDefinition.click_on_Personal_Loan()"
+});
+formatter.result({
+  "duration": 8471071400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "emiVerificationstepDefinition.click_on_EMI_Calculator()"
+});
+formatter.result({
+  "duration": 7552171600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "emiVerificationstepDefinition.verify_that_Personal_Loan_Emi_Calculator_is_Opened()"
+});
+formatter.result({
+  "duration": 12305100,
   "status": "passed"
 });
 formatter.scenarioOutline({
-  "line": 8,
+  "line": 11,
   "name": "",
   "description": "",
-  "id": "amazon-first-flow-test;",
+  "id": "icici;",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 9,
-  "name": "Click on each item, item \"\u003cnumber\u003e\"",
+  "line": 12,
+  "name": "Personal Loan Emi Calculator is present and opened",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 13,
+  "name": "User enters value in Loan Amount as \"\u003cLoanAmount\u003e\" and Interest Rate as \"\u003cInterestRate\u003e\" and Loan Term as \"\u003cLoanTerm\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
-  "name": "verify user is on the \"\u003ccorrect\u003e\" page",
+  "line": 14,
+  "name": "Verify EMI is displayed as \"\u003cMonthlyEMI\u003e\"",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 12,
+  "line": 16,
   "name": "",
   "description": "",
-  "id": "amazon-first-flow-test;;",
+  "id": "icici;;",
   "rows": [
     {
       "cells": [
-        "number",
-        "correct"
+        "LoanAmount",
+        "InterestRate",
+        "LoanTerm",
+        "MonthlyEMI"
       ],
-      "line": 13,
-      "id": "amazon-first-flow-test;;;1"
+      "line": 17,
+      "id": "icici;;;1"
     },
     {
       "cells": [
-        "2",
-        "About Pay on Delivery"
+        "130000",
+        "14",
+        "31",
+        "Rs. 5,022"
       ],
-      "line": 14,
-      "id": "amazon-first-flow-test;;;2"
+      "line": 18,
+      "id": "icici;;;2"
     },
     {
       "cells": [
-        "3",
-        "EMI (Easy Installments)"
+        "140000",
+        "15",
+        "41",
+        "Rs. 4,385"
       ],
-      "line": 15,
-      "id": "amazon-first-flow-test;;;3"
+      "line": 19,
+      "id": "icici;;;3"
+    },
+    {
+      "cells": [
+        "150000",
+        "16",
+        "51",
+        "Rs. 4,073"
+      ],
+      "line": 20,
+      "id": "icici;;;4"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 14,
+  "line": 18,
   "name": "",
   "description": "",
-  "id": "amazon-first-flow-test;;;2",
+  "id": "icici;;;2",
   "type": "scenario",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 9,
-  "name": "Click on each item, item \"2\"",
+  "line": 12,
+  "name": "Personal Loan Emi Calculator is present and opened",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 13,
+  "name": "User enters value in Loan Amount as \"130000\" and Interest Rate as \"14\" and Loan Term as \"31\"",
   "matchedColumns": [
-    0
+    0,
+    1,
+    2
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
-  "name": "verify user is on the \"About Pay on Delivery\" page",
+  "line": 14,
+  "name": "Verify EMI is displayed as \"Rs. 5,022\"",
   "matchedColumns": [
-    1
+    3
   ],
   "keyword": "Then "
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 26
-    }
-  ],
-  "location": "amazonflow.clicks_on_Pay_on_delivery(String)"
+  "location": "emiVerificationstepDefinition.Personal_Loan_Emi_Calculator_is_present_and_opened()"
 });
 formatter.result({
-  "duration": 6136890200,
+  "duration": 15983300,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "About Pay on Delivery",
-      "offset": 23
+      "val": "130000",
+      "offset": 37
+    },
+    {
+      "val": "14",
+      "offset": 67
+    },
+    {
+      "val": "31",
+      "offset": 89
     }
   ],
-  "location": "amazonflow.verify_user_is_on_the_correct_page()"
+  "location": "emiVerificationstepDefinition.user_enters_value_in_Loan_Amount_as_and_Interest_Rate_as_and_Loan_Term_as(String,String,String)"
 });
 formatter.result({
-  "duration": 800900,
-  "error_message": "cucumber.runtime.CucumberException: Arity mismatch: Step Definition \u0027stepDefinitions.amazonflow.verify_user_is_on_the_correct_page() in file:/D:/AutomationLearn/projectBDDframework/target/classes/\u0027 with pattern [^verify user is on the \\\"([^\\\"]*)\\\" page$] is declared with 0 parameters. However, the gherkin step has 1 arguments [About Pay on Delivery]. \nStep: Then verify user is on the \"About Pay on Delivery\" page\r\n\tat cucumber.runtime.StepDefinitionMatch.arityMismatch(StepDefinitionMatch.java:102)\r\n\tat cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:60)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)\r\n",
-  "status": "failed"
+  "duration": 11218334300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Rs. 5,022",
+      "offset": 28
+    }
+  ],
+  "location": "emiVerificationstepDefinition.verify_EMI_is_displayed_as(String)"
+});
+formatter.result({
+  "duration": 2118278500,
+  "status": "passed"
 });
 formatter.scenario({
-  "line": 15,
+  "line": 19,
   "name": "",
   "description": "",
-  "id": "amazon-first-flow-test;;;3",
+  "id": "icici;;;3",
   "type": "scenario",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 9,
-  "name": "Click on each item, item \"3\"",
+  "line": 12,
+  "name": "Personal Loan Emi Calculator is present and opened",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 13,
+  "name": "User enters value in Loan Amount as \"140000\" and Interest Rate as \"15\" and Loan Term as \"41\"",
   "matchedColumns": [
-    0
+    0,
+    1,
+    2
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
-  "name": "verify user is on the \"EMI (Easy Installments)\" page",
+  "line": 14,
+  "name": "Verify EMI is displayed as \"Rs. 4,385\"",
   "matchedColumns": [
-    1
+    3
   ],
   "keyword": "Then "
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 26
-    }
-  ],
-  "location": "amazonflow.clicks_on_Pay_on_delivery(String)"
+  "location": "emiVerificationstepDefinition.Personal_Loan_Emi_Calculator_is_present_and_opened()"
 });
 formatter.result({
-  "duration": 4041118700,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@id\u003d\u0027help-gateway-category-3\u0027]/div/div/div/ul/li[3]/a\"}\n  (Session info: chrome\u003d76.0.3809.100)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:25:48\u0027\nSystem info: host: \u0027KOUSHIK-DEVELOP\u0027, ip: \u0027192.168.43.79\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\\Users\\koush\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:3878}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 06e1c37e4eeb2380dd1ea20b001187e4\n*** Element info: {Using\u003dxpath, value\u003d//div[@id\u003d\u0027help-gateway-category-3\u0027]/div/div/div/ul/li[3]/a}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat pageLayer.amazonflowPageObject.clicks_on_Pay_on_delivery(amazonflowPageObject.java:23)\r\n\tat stepDefinitions.amazonflow.clicks_on_Pay_on_delivery(amazonflow.java:31)\r\n\tat ✽.When Click on each item, item \"3\"(D:/AutomationLearn/projectBDDframework/src/main/java/Features/amazonflow.feature:9)\r\n",
-  "status": "failed"
+  "duration": 1838810600,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "EMI (Easy Installments)",
-      "offset": 23
+      "val": "140000",
+      "offset": 37
+    },
+    {
+      "val": "15",
+      "offset": 67
+    },
+    {
+      "val": "41",
+      "offset": 89
     }
   ],
-  "location": "amazonflow.verify_user_is_on_the_correct_page()"
+  "location": "emiVerificationstepDefinition.user_enters_value_in_Loan_Amount_as_and_Interest_Rate_as_and_Loan_Term_as(String,String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 8451762000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Rs. 4,385",
+      "offset": 28
+    }
+  ],
+  "location": "emiVerificationstepDefinition.verify_EMI_is_displayed_as(String)"
+});
+formatter.result({
+  "duration": 2082969400,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 20,
+  "name": "",
+  "description": "",
+  "id": "icici;;;4",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 12,
+  "name": "Personal Loan Emi Calculator is present and opened",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 13,
+  "name": "User enters value in Loan Amount as \"150000\" and Interest Rate as \"16\" and Loan Term as \"51\"",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 14,
+  "name": "Verify EMI is displayed as \"Rs. 4,073\"",
+  "matchedColumns": [
+    3
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "emiVerificationstepDefinition.Personal_Loan_Emi_Calculator_is_present_and_opened()"
+});
+formatter.result({
+  "duration": 1916414900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "150000",
+      "offset": 37
+    },
+    {
+      "val": "16",
+      "offset": 67
+    },
+    {
+      "val": "51",
+      "offset": 89
+    }
+  ],
+  "location": "emiVerificationstepDefinition.user_enters_value_in_Loan_Amount_as_and_Interest_Rate_as_and_Loan_Term_as(String,String,String)"
+});
+formatter.result({
+  "duration": 8308688200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Rs. 4,073",
+      "offset": 28
+    }
+  ],
+  "location": "emiVerificationstepDefinition.verify_EMI_is_displayed_as(String)"
+});
+formatter.result({
+  "duration": 2078966100,
+  "status": "passed"
 });
 });
