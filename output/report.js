@@ -53,49 +53,49 @@ formatter.match({
   "location": "emiVerificationstepDefinition.open_bank_index()"
 });
 formatter.result({
-  "duration": 24506932500,
+  "duration": 16160651100,
   "status": "passed"
 });
 formatter.match({
   "location": "emiVerificationstepDefinition.title_check()"
 });
 formatter.result({
-  "duration": 16014500,
+  "duration": 13678200,
   "status": "passed"
 });
 formatter.match({
   "location": "emiVerificationstepDefinition.allow_popup()"
 });
 formatter.result({
-  "duration": 6281051600,
+  "duration": 4324055500,
   "status": "passed"
 });
 formatter.match({
   "location": "emiVerificationstepDefinition.mouse_hover_on_Product_tan_and_click_Loans()"
 });
 formatter.result({
-  "duration": 9442848000,
+  "duration": 7853566200,
   "status": "passed"
 });
 formatter.match({
   "location": "emiVerificationstepDefinition.click_on_Personal_Loan()"
 });
 formatter.result({
-  "duration": 8471071400,
+  "duration": 7968511400,
   "status": "passed"
 });
 formatter.match({
   "location": "emiVerificationstepDefinition.click_on_EMI_Calculator()"
 });
 formatter.result({
-  "duration": 7552171600,
+  "duration": 6516210900,
   "status": "passed"
 });
 formatter.match({
   "location": "emiVerificationstepDefinition.verify_that_Personal_Loan_Emi_Calculator_is_Opened()"
 });
 formatter.result({
-  "duration": 12305100,
+  "duration": 8005800,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -205,7 +205,7 @@ formatter.match({
   "location": "emiVerificationstepDefinition.Personal_Loan_Emi_Calculator_is_present_and_opened()"
 });
 formatter.result({
-  "duration": 15983300,
+  "duration": 16357700,
   "status": "passed"
 });
 formatter.match({
@@ -226,7 +226,7 @@ formatter.match({
   "location": "emiVerificationstepDefinition.user_enters_value_in_Loan_Amount_as_and_Interest_Rate_as_and_Loan_Term_as(String,String,String)"
 });
 formatter.result({
-  "duration": 11218334300,
+  "duration": 10499825900,
   "status": "passed"
 });
 formatter.match({
@@ -239,7 +239,7 @@ formatter.match({
   "location": "emiVerificationstepDefinition.verify_EMI_is_displayed_as(String)"
 });
 formatter.result({
-  "duration": 2118278500,
+  "duration": 2086124300,
   "status": "passed"
 });
 formatter.scenario({
@@ -277,7 +277,7 @@ formatter.match({
   "location": "emiVerificationstepDefinition.Personal_Loan_Emi_Calculator_is_present_and_opened()"
 });
 formatter.result({
-  "duration": 1838810600,
+  "duration": 2182847500,
   "status": "passed"
 });
 formatter.match({
@@ -298,7 +298,7 @@ formatter.match({
   "location": "emiVerificationstepDefinition.user_enters_value_in_Loan_Amount_as_and_Interest_Rate_as_and_Loan_Term_as(String,String,String)"
 });
 formatter.result({
-  "duration": 8451762000,
+  "duration": 8213458000,
   "status": "passed"
 });
 formatter.match({
@@ -311,7 +311,7 @@ formatter.match({
   "location": "emiVerificationstepDefinition.verify_EMI_is_displayed_as(String)"
 });
 formatter.result({
-  "duration": 2082969400,
+  "duration": 2079005700,
   "status": "passed"
 });
 formatter.scenario({
@@ -349,7 +349,7 @@ formatter.match({
   "location": "emiVerificationstepDefinition.Personal_Loan_Emi_Calculator_is_present_and_opened()"
 });
 formatter.result({
-  "duration": 1916414900,
+  "duration": 12787100,
   "status": "passed"
 });
 formatter.match({
@@ -370,7 +370,7 @@ formatter.match({
   "location": "emiVerificationstepDefinition.user_enters_value_in_Loan_Amount_as_and_Interest_Rate_as_and_Loan_Term_as(String,String,String)"
 });
 formatter.result({
-  "duration": 8308688200,
+  "duration": 10090748900,
   "status": "passed"
 });
 formatter.match({
@@ -383,7 +383,63 @@ formatter.match({
   "location": "emiVerificationstepDefinition.verify_EMI_is_displayed_as(String)"
 });
 formatter.result({
-  "duration": 2078966100,
+  "duration": 2083104200,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 22,
+  "name": "Task Complete",
+  "description": "",
+  "id": "icici;task-complete",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 23,
+  "name": "User is on EMI calculator page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 24,
+  "name": "user clicks on Bank logo",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 25,
+  "name": "verify user is on Bank index page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 26,
+  "name": "Browser closes",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "emiVerificationstepDefinition.user_is_on_EMI_calculator_page()"
+});
+formatter.result({
+  "duration": 1006832700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "emiVerificationstepDefinition.user_clicks_on_Bank_logo()"
+});
+formatter.result({
+  "duration": 8119280000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "emiVerificationstepDefinition.verify_user_is_on_Bank_index_page()"
+});
+formatter.result({
+  "duration": 1009183800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "emiVerificationstepDefinition.browser_closes()"
+});
+formatter.result({
+  "duration": 820842400,
   "status": "passed"
 });
 });

@@ -1,6 +1,7 @@
 package pageLayer;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
@@ -48,8 +49,11 @@ public class emiVerificationObjects extends testBase{
 		return driver.getTitle();
 	}
 	
-	public void click_on_logo() {
-		driver.findElement(By.xpath("//*[@class='Logo']")).click();
+	public void click_on_logo() throws InterruptedException {
+		WebElement element = driver.findElement(By.xpath("//*[@class='Logo']"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
+		Thread.sleep(2000);
+		element.click();
 	}
 	
 	public void finish_operation() {
