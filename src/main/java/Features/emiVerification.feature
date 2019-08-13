@@ -18,3 +18,10 @@ Scenario Outline:
 		|130000|14|31|Rs. 5,022|
 		|140000|15|41|Rs. 4,385|
 		|150000|16|51|Rs. 4,073|
+		
+Scenario: Task Complete
+		Given User is on EMI calculator page
+		When user clicks on Bank logo
+		Then verify user is on Bank index page 
+		And Browser closes
+		

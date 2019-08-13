@@ -109,5 +109,29 @@ public class emiVerificationstepDefinition extends testBase {
 		driver.switchTo().defaultContent();
 		Thread.sleep(2000);
 		}
+	@Given("^User is on EMI calculator page$")
+	public void user_is_on_EMI_calculator_page() throws Throwable {
+		String title = emiVerification.Validate_Page_Title();
+		Assert.assertEquals("Personal Loan EMI Calculator, Online Monthly EMI Calculator - ICICI Bank Personal Loans", title);
+		Thread.sleep(1000);
+	}
+
+	@When("^user clicks on Bank logo$")
+	public void user_clicks_on_Bank_logo() throws Throwable {
+		emiVerification.click_on_logo();
+		Thread.sleep(4000);
+	}
+
+	@Then("^verify user is on Bank index page$")
+	public void verify_user_is_on_Bank_index_page() throws Throwable {
+		String title = emiVerification.Validate_Page_Title();
+		Assert.assertEquals("Personal Banking, Online Banking Services - ICICI Bank", title);
+		Thread.sleep(1000);
+	}
+
+	@Then("^Browser closes$")
+	public void browser_closes() throws Throwable {
+		emiVerification.finish_operation();
+	}
 
 }

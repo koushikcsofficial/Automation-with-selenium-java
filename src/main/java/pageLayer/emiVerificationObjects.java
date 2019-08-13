@@ -48,6 +48,10 @@ public class emiVerificationObjects extends testBase{
 		return driver.getTitle();
 	}
 	
+	public void click_on_logo() {
+		driver.findElement(By.xpath("//*[@class='Logo']")).click();
+	}
+	
 	public void finish_operation() {
 		driver.close();
 		driver.quit();
