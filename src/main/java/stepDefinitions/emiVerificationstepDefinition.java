@@ -126,6 +126,7 @@ public class emiVerificationstepDefinition extends testBase {
 	public void verify_user_is_on_Bank_index_page() throws Throwable {
 		String title = emiVerification.Validate_Page_Title();
 		Assert.assertEquals("Personal Banking, Online Banking Services - ICICI Bank", title);
+		emiVerification.click_allow();
 		Thread.sleep(1000);
 	}
 

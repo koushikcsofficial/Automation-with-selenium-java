@@ -12,6 +12,15 @@ import utilities.testBase;
 
 public class emiVerificationObjects extends testBase{
 	
+	//New modification
+	String allowPopupXpath = "//*[contains(text(),'Allow')]";
+	String ProductXpath = "//*[@class='personal-mobile-1 shorter']";
+	String LoanXpath = "//*[text()='Loans']";
+	String PersonalLoanXpath = "//*[@class='lhsnavigation']/li[5]";
+	String EmiCalculatorXpath = "//*[text()='EMI Calculator ']";
+	String LogoXpath = "//*[@class='Logo']";
+	//New Modification 2
+	
 	public emiVerificationObjects() {
 		PageFactory.initElements(driver, this);
 	}
@@ -22,27 +31,27 @@ public class emiVerificationObjects extends testBase{
 	
 	public void click_allow() {
 		WebDriverWait wait = new WebDriverWait(driver,20);  
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Allow')]")));
-		driver.findElement(By.xpath("//*[contains(text(),'Allow')]")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(allowPopupXpath)));
+		driver.findElement(By.xpath(allowPopupXpath)).click();
 	}
 	
 	public void hover_on_products() {
-		WebElement ele = driver.findElement(By.xpath("//*[@class='personal-mobile-1 shorter']"));
+		WebElement ele = driver.findElement(By.xpath(ProductXpath));
 		Actions act = new Actions(driver);
 		act.moveToElement(ele).perform();
 		System.out.println("Hover on products done");
 	}
 	
 	public void click_on_loans() {
-		driver.findElements(By.xpath("//*[text()='Loans']")).get(0).click();
+		driver.findElements(By.xpath(LoanXpath)).get(0).click();
 	}
 	
 	public void click_on_personal_loans() {
-		driver.findElements(By.xpath("//*[@class='lhsnavigation']/li[5]")).get(0).click();
+		driver.findElements(By.xpath(PersonalLoanXpath)).get(0).click();
 	}
 	
 	public void click_on_emiCalculator() {
-		driver.findElement(By.xpath("//*[text()='EMI Calculator ']")).click();
+		driver.findElement(By.xpath(EmiCalculatorXpath)).click();
 	}
 	
 	public String verify_emiCalculator() {
@@ -50,7 +59,7 @@ public class emiVerificationObjects extends testBase{
 	}
 	
 	public void click_on_logo() throws InterruptedException {
-		WebElement element = driver.findElement(By.xpath("//*[@class='Logo']"));
+		WebElement element = driver.findElement(By.xpath(LogoXpath));
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
 		Thread.sleep(2000);
 		element.click();
